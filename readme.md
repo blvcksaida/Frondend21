@@ -63,7 +63,9 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Breakdownschets (week 1)
 
 -uitwerken voor de 1e werkgroep - eind van de eerste week-
-
+<img src="images/break1.png" width="375px" alt="breakdown schets 1">
+<img src="images/break2.png" width="375px" alt="breakdown schets 2">
+<img src="images/break3.png" width="375px" alt="breakdown schets 3">
 
 
 ## Intake (week 1)
@@ -71,16 +73,14 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je startniveau:** Blauw/Rood
 
-**Je focus:** Responsive (Geen idee wat Surface Plane is)
+**Je focus:** Responsive 
 
-**Je opdracht:** http://themovementmodels.com/
+**Je opdracht:** https://www.crisp.nl/
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/pagina1.png" width="375px" alt="Model pagina">
-<img src="images/pag1groot.png" width="375px" alt="Model pagina">
+<img src="images/crisphome.png" width="375px" alt="Homepagina Crisp">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/pagina2.png" width="375px" alt="Pagina Lou">
-<img src="images/pag2groot.png" width="375px" alt="Pagina Lou">
+<img src="images/crispform.png" width="375px" alt="Contactpagina Crisp">
