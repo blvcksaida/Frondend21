@@ -38,11 +38,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ### Stand van zaken
 
--dit ging goed & dit was lastig-
+Ik heb tot nu toe alle HTML van de eerste pagina geschreven. Dit ging heel erg soepel, vooral ook door die breakdown schetsen. Dus ik ben van plan dat ook te maken voor de tweede pagina.
+
+Moeilijk:
+Sommige iconen/afbeeldingen kon ik niet van de site zelf halen, dus die heb ik zelf moeten opzoeken. Alleen hebben die dan verschillende groottes. Wat is de beste manier om aan te pakken dat ze dezelfde groottes krijgen?
 
 **Screenshot(s):**
 
--screenshot(s) van hoe ver je bent met korte uitleg-
+<img src="images/screenshot1.png" width="375px" alt="voortgang 1">
+<img src="images/screenshot2.png" width="375px" alt="voortgang 1">
 
 ### Agenda voor meeting
 
@@ -73,7 +77,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Je startniveau:** Blauw/Rood
 
-**Je focus:** Responsive 
+**Je focus:** Responsive
 
 **Je opdracht:** https://www.crisp.nl/
 
