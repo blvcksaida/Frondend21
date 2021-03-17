@@ -30,7 +30,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Breakdownschets (week 1)
 
 -uitwerken voor de 1e werkgroep - eind van de eerste week-
-<img src="images/break1.png" width="375px" alt="breakdown schets 1">
+<img src="images/break1.png" width="200px" alt="breakdown schets 1">
 <img src="images/break2.png" width="375px" alt="breakdown schets 2">
 <img src="images/break3.png" width="375px" alt="breakdown schets 3">
 
@@ -43,8 +43,8 @@ Sommige iconen/afbeeldingen kon ik niet van de site zelf halen, dus die heb ik z
 
 **Screenshot(s):**
 
-<img src="images/screenshot1.png" width="375px" alt="voortgang 1">
-<img src="images/screenshot2.png" width="375px" alt="voortgang 1">
+<img src="images/screenshot1.png" width="200px" alt="voortgang 1">
+<img src="images/screenshot2.png" width="200px" alt="voortgang 1">
 
 ### Verslag van meeting
 
@@ -59,7 +59,8 @@ Ik heb moeite met het hamburgermenu, de button in de header sticky maken (m.b.v.
 
 **Screenshot(s):**
 
-<img src="images/screenshot3.png" width="375px" alt="voortgang 1">
+<img src="images/screenshot3.png" width="200px" alt="voortgang 1">
+<img src="images/screenshot4.png" width="200px" alt="voortgang 1">
 
 ### Verslag van meeting
 
