@@ -21,11 +21,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/crisphome.png" width="375px" alt="Homepagina Crisp">
+<img src="images/crisphome.png" width="200px" alt="Homepagina Crisp">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/crispform.png" width="375px" alt="Contactpagina Crisp">
+<img src="images/crispform.png" width="200px" alt="Contactpagina Crisp">
 
 ## Breakdownschets (week 1)
 
