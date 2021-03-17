@@ -159,7 +159,7 @@ section:first-of-type h2 {
 }
 
 /*container flex maken en een padding en margin meegeven*/
-section article {
+section:first-of-type article {
   display: flex;
   flex-direction: column;
   padding-left: 20px;
@@ -167,7 +167,7 @@ section article {
 }
 
 /*p stylen naar een label en over img plaatsen door position: absolute*/
-section p {
+section:first-of-type p {
   font-size: 13px;
   font-weight: bold;
   color: #ffffff;
