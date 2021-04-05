@@ -1,16 +1,15 @@
 /* CSS Document */
 *, *::after, *::before {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 /* Generic styling */
-* {
-
-}
+* {}
 
 html {
   font-family: MaisonNeue, HelveticaNeue, Helvetica, Arial, sans-serif;
-  color: #0C3338;}
+  color: #0C3338;
+}
 
 body {
   font-size: 100%;
@@ -18,96 +17,204 @@ body {
   margin: 0;
 }
 
-/*----------Header styling----------*/
-
+/*----------------------------------------Header styling------------------------------------------*/
 /*header container styling, zodat achtergrond image hele breedte inneemt*/
 header {
   width: 100%;
-  background-color: #f3c1b8;
-  background-image: url("../images/headerimg.jfif");
-  background-size: cover;
+  background-color: #e8e0d3;
+  background-image: url("../images/backgroundsmallscreen.jfif");
+  background-size: 110% auto;
+  background-repeat: no-repeat;
+  background-position: 80% 40%;
 }
 
+/*--------------------------nav styling------------------------*/
 /*gebruik van flexbox voor de nav en de nav absoluut positioneren zodat nav niet onnodige ruimte inneemt in header*/
 nav {
   position: absolute;
-  display: flex;
   width: 100%;
-  padding: 30px 35px 0 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav section:first-of-type {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
- /*Crisp logo styling*/
-header a img {
-  height: 35px;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
 }
 
-/*hamburger menu styling*/
-header:nth-of-type(2) img {
-  width: 20px;
+/*Crisp logo styling*/
+nav section:first-of-type a img {
+  height: 100%;
+  width: 6.5em;
 }
 
-/*overige content uit header (zonder nav) flex maken en onder elkaar zetten met flex-direction. Padding geven aan de container, om meer ruimte te creeëren in header*/
-header div {
+nav section:first-of-type a {
+  margin-top: 2em;
+  margin-right: 6em;
+}
+
+/*styling voor toegankelijkheid van element*/
+nav section:first-of-type a:focus,
+nav section:first-of-type a:active {
+  outline: none;
+  background-color: rgba(0, 56, 64, .1);
+  padding: .5em;
+  border-radius: .5em;
+}
+
+/*---------------------hamburger menu styling-------------------*/
+#hamburgermenu {
+  width: 1.25em;
+  height: 100%;
+  margin-right: .8em;
+  margin-top: 2em;
+  z-index: 1;
+}
+
+/*styling hamburger menu dat wordt toegevoegd na click event in JS*/
+#hamburgermenu.menufixed {
+  position: fixed;
+  right: 0;
+  margin-right: 2em;
+  margin-top: 1em;
+}
+
+/*styling menu ul en buiten de viewport plaatsen*/
+nav section:last-of-type {
+  position: fixed;
+  background-color: #ffffff;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-100%);
+}
+
+/*styling menu ul na click event in JS, menu binnen viewport plaatsen*/
+nav section:last-of-type.clickedMenu {
+  position: fixed;
+  background-color: #ffffff;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  transform: translateY(0%);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 3.2em 1.25em 0;
+}
+
+nav li {
+  margin-left: 1.9em;
+  margin-top: 1.9em;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #0C3338;
+  font-size: 1.6em;
+  margin-left: .9em;
+  padding: 1.25em 0 .3em;
+}
+
+/*styling voor toegankelijkheid van element*/
+nav li a:focus,
+nav li a:active {
+  outline: none;
+  color: rgba(0, 56, 64, .5);
+}
+
+/*---------------------------styling menu ul-------------------------*/
+header section:only-of-type {
   display: flex;
   flex-direction: column;
   padding: 180px 20px 40px 20px;
 }
 
-/*h1 hoofdtekst styling*/
-header div h1 {
+/*h2 hoofdtekst styling*/
+header h2 {
   font-size: 30px;
   line-height: 34px;
   margin-top: 150px;
   margin-bottom: 0;
   font-weight: bold;
   color: #024852;
-  max-width: 320px;
+  width: 11em;
 }
 
 /*p styling*/
-header p:nth-of-type(1) {
+header section p:nth-of-type(1) {
   font-size: 21px;
   line-height: 28px;
   margin-top: 15px;
   margin-bottom: 0;
   color: #024852;
-  max-width: 300px;
+  width: auto;
+}
 
+header section article:last-of-type {
+  display: none;
 }
 
 /*button styling*/
-a button {
+header a button {
   background-color: #FF5C53;
   text-decoration: none;
   border: none;
-  border-radius: 2px;
-  width: 233px;
-  height: 50px;
-  margin-top: 20px;
+  border-radius: .1em;
+  min-width: 14em;
+  height: 3em;
+  margin-top: 1.25em;
   color: #ffffff;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 1.1em;
 }
 
+/*styling voor toegankelijkheid van element*/
 /*hover effect met andere kleur, toevoegen aan button*/
-a button:hover {
+header section article:last-of-type div a button:hover {
   background-color: #ec0c00;
+  box-shadow: inset -.2em -.2em rgba(0, 0, 0, .25);
+  border-radius: .3em;
+  cursor: pointer;
 }
 
-.stickybutton {
-  position: fixed;
-  background-color: #ffffff;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-  top: 0;
-  left: 0;
-  right:0;
+header section article:last-of-type div a button:focus {
+  background-color: rgba(0, 57, 64, .8);
+  outline: none;
+}
+
+header section article:last-of-type div a button:active {
+  background-color: Navy;
+  outline: none;
+}
+
+header section article:last-of-type div a:focus {
+  outline: none;
+}
+
+header section article:last-of-type div a:active {
+  outline: none;
 }
 
 /*p styling*/
-header p:nth-of-type(2) {
+header section article:first-of-type p:nth-of-type(1) {
   font-size: 15px;
   line-height: 20px;
   color: #024852;
@@ -116,258 +223,1102 @@ header p:nth-of-type(2) {
   margin-bottom: 0;
 }
 
-/*-----Hamburger menu styling-----*/
-/*nav a {
-  text-decoration: none;
-  color: #0C3338;
-  margin: 0 15px;
+/*-----------------------------------------Body styling---------------------------------------------*/
+/*main content vastzetten na click event van hamburgermenu in JS*/
+.mainfixed {
+  position: fixed;
+  z-index: -1;
 }
 
-ul {
-  display: fixed;
-  background-color: #ffffff;
-  bottom: 0;
-  top: 0;
-  right: 0;
-  left: 0;
-  list-style: none;
-  z-index:
-}
-*/
-
-
-/*----------Body styling----------*/
-
-main img {
+/*-----------------------styling first section---------------------*/
+/*stlying images*/
+main section:first-of-type img {
   height: auto;
-  max-width: 400px;
   width: 100%;
 }
 
 /*container van main content flex maken en padding geven*/
-section:first-of-type {
+main section:first-of-type {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: 0px 20px;
-  margin: 40px 0px;
+  padding: 0 1em;
+  margin: 2.5em 0;
 }
 
 /*styling h2 section*/
-section:first-of-type h2 {
+main section:first-of-type h2 {
   margin-top: 0;
 }
 
 /*container flex maken en een padding en margin meegeven*/
-section:first-of-type article {
+main section:first-of-type article {
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  margin-bottom: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 3em;
 }
 
 /*p stylen naar een label en over img plaatsen door position: absolute*/
-section:first-of-type p {
-  font-size: 13px;
+main section:first-of-type p {
+  font-size: .8em;
   font-weight: bold;
   color: #ffffff;
   text-align: center;
   vertical-align: middle;
-  line-height: 25px;
+  line-height: 1.6em;
   background-color: #024852;
-  width: 85px;
-  height: 25px;
-  border-radius: 2px;
+  width: 7em;
+  height: auto;
+  border-radius: .2em;
   position: absolute;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: .6em;
+  margin-top: .6em;
 }
 
 /*img elementen van eerste section responsive maken*/
-section:first-of-type img {
+main section:first-of-type img {
   width: 100%;
   height: auto;
 }
 
-section:first-of-type h3 {
-  font-size: 21px;
+main section:first-of-type h3 {
+  font-size: 1.3em;
   font-weight: bold;
   line-height: 1em;
   color: #003a40;
-  margin-top: 20px;
+  margin-top: 1em;
   margin-bottom: 0;
 }
 
-section:first-of-type ul {
+main section:first-of-type ul {
   list-style-type: disc;
-  padding-left: 15px;
+  padding-left: .9em;
 }
 
-
-section:first-of-type li {
+main section:first-of-type li {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 15px;
-  line-height: 22px;
+  margin-bottom: .6em;
+  font-size: .9em;
+  line-height: 1.35em;
 }
 
-
-
-section:last-of-type img{
-  width: 350px;
-  height: 512px;
-}
-
-section:nth-of-type(1) {
-  /*display: flex;
-  align-items: center;
-  justify-content: center;*/
-}
-
-/*section:nth-of-type(2) {
+/*-----------------------styling second section------------------------*/
+/*styling blauwe sectie*/
+main section:nth-of-type(2) {
+  background-color: rgb(135, 172, 217);
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
-section:nth-of-type(3) {
+main section:nth-of-type(2) article {
+  margin: 2.5em 0;
+  padding: 0 1.25em;
   display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(2) article h3 {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 1.9em;
+  max-width: 15em;
+}
+
+main section:nth-of-type(2) article img {
+  width: 100%;
+  height: 3.1em;
+}
+
+/*-----------------------------styling third section----------------------------*/
+/*section veranderen in grid*/
+main section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  margin: 2.5em 0;
+  padding: 0 1.25em;
+}
+
+main section:nth-of-type(3) div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1em;
+}
+
+main section:nth-of-type(3) article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  border: .05em solid #dbe9f4;
+}
+
+main section:nth-of-type(3) h2 {
+  font-size: 1.4em;
+  align-self: flex-start;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+main section:nth-of-type(3) article img {
+  width: 100%;
+}
+
+main section:nth-of-type(3) article h3 {
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.4em;
+  margin-top: .25em;
+  margin-bottom: 0;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  padding-top: 1.25em;
+}
+
+main section:nth-of-type(3) article p:first-of-type {
+  font-size: .8em;
+  line-height: 1.2em;
+  margin-top: .6em;
+  margin-bottom: 0;
+  color: #767676;
+  padding-left: 1.6em;
+  padding-right: 1.6em;
+}
+
+main section:nth-of-type(3) article p:last-of-type {
+  padding: 5em 1.25em 1.25em;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+main section:nth-of-type(3) article span:first-of-type {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+main section:nth-of-type(3) article span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+main section:nth-of-type(3) article span:last-of-type {
+  font-weight: bold;
+  font-size: .8em;
+}
+
+/*button styling "meer uit het assortiment"*/
+main section:nth-of-type(3) a button {
+  margin: 0 auto;
+  border: .1em solid #003a40;
+  border-radius: .1em;
+  background-color: transparent;
+  color: #003a40;
+  font-size: .9em;
+  padding: .8em 2.5em;
+}
+
+/*styling voor toegankelijkheid van element*/
+main section:nth-of-type(3) a button:hover {
+  background-color: #ec0c00;
+  color: white;
+  box-shadow: inset -.2em -.2em rgba(0, 0, 0, .25);
+  border-radius: .3em;
+  cursor: pointer;
+  border: .1em solid rgba(0, 58, 64, 0);
+}
+
+main section:nth-of-type(3) a button:focus {
+  background-color: rgba(0, 57, 64, .8);
+  outline: none;
+  color: white;
+  border: .1em solid rgba(0, 57, 64, 0)
+}
+
+main section:nth-of-type(3) a button:active {
+  background-color: Navy;
+  outline: none;
+}
+
+main section:nth-of-type(3) a:focus {
+  outline: none;
+}
+
+main section:nth-of-type(3) a:active {
+  outline: none;
+}
+
+main section:nth-of-type(3) a {
+  margin-top: 1.9em;
+  align-self: center;
+}
+
+/*--------------------------------styling fourth section review sectie---------------------------------*/
+main section:nth-of-type(4) {
+  background-color: #003a40;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5em 1.25em;
+}
+
+main section:nth-of-type(4) h2 {
+  font-size: 1.5em;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+main section:nth-of-type(4) article {
+  margin: 0 3.5em 2.5em 0;
+}
+
+main section:nth-of-type(4) article h3 {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+main section:nth-of-type(4) article article {
+  margin: .6em 0 .9em;
+  display: flex;
+  flex-direction: row;
+}
+
+main section:nth-of-type(4) article img {
+  margin-right: .1em;
+}
+
+main section:nth-of-type(4) article article p {
+  font-size: 1em;
+  color: white;
+  margin-left: .5em;
+}
+
+main section:nth-of-type(4) article p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: white;
+  margin: 0;
+}
+
+main section:nth-of-type(4) article:nth-of-type(3) {
+  display: none
+}
+
+main section:nth-of-type(4) a button {
+  border: .1em solid white;
+  border-radius: .1em;
+  background-color: transparent;
+  color: white;
+  font-size: .9em;
+  padding: .8em 1.5em;
+}
+
+/*styling voor toegankelijkheid van element*/
+main section:nth-of-type(4) a button:focus,
+main section:nth-of-type(4) a button:active {
+  background-color: rgba(0, 57, 64, .5);
+  outline: none;
+}
+
+main section:nth-of-type(4) a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*---------------------------------styling fifth section 'Veelgestelde vragen'-------------------------------*/
+main section:nth-of-type(5) article {
+  width: 100%;
+  max-width: 43.75em;
+  border-bottom: .05em solid #0000001a;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(5) article div {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  cursor: pointer;
+}
+
+/*styling voor toegankelijkheid van element*/
+main section:nth-of-type(5) article:hover {
+  background-color: rgba(0, 57, 64, .1);
+}
+
+main section:nth-of-type(5) article p {
+  display: none;
+}
+
+/* wanneer div een class .showtext heeft, wil ik de sibling(p) laten zien*/
+main section:nth-of-type(5) article div.showtext+p {
+  display: block;
+}
+
+main section:nth-of-type(5) h2 {
+  margin: 1.25em 0 1.25em 1.25em;
+}
+
+main section:nth-of-type(5) article img {
+  width: .7em;
+  height: auto;
+  margin-right: .8em;
+}
+
+main section:nth-of-type(5) article h3 {
+  font-size: 1em;
+  margin: 0;
+}
+
+main section:nth-of-type(5) article p {
+  font-size: 1em;
+  line-height: 1.6em;
+  padding-bottom: 1.25em;
+  margin: 0 0 0 1.25em;
+}
+
+main section:nth-of-type(5) article:first-of-type {
+  border-top: .1em solid #0000001a;
+}
+
+main section:nth-of-type(5) article:last-of-type {
+  margin-bottom: 2.5em;
+}
+
+/*--------------------------------------styling last section---------------------------------------*/
+main section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #2e7a6e 40%, #8bccbb 100%)
+}
+
+/*--------------------first article--------------------*/
+main section:last-of-type article:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.1em;
+  margin-bottom: 5em;
+  padding-left: 1.25em;
+  padding-right: 1.25em;
+}
+
+main section:last-of-type article:first-of-type h3 {
+  color: white;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+main section:last-of-type article:first-of-type a {
+  font-size: 21px;
+  line-height: 28px;
+  margin-bottom: 0;
+  color: #024852;
+  width: 100%;
+  min-width: 12.5em;
+  max-width: 15em;
+}
+
+main section:last-of-type article:first-of-type a button {
+  background-color: #FF5C53;
+  text-decoration: none;
+  border: none;
+  height: 3.1em;
+  width: 100%;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: .5em;
+}
+
+/*styling voor toegankelijkheid van element*/
+main section:last-of-type article:first-of-type a button:hover {
+  background-color: #ec0c00;
+  box-shadow: inset -.2em -.2em rgba(0, 0, 0, .25);
+  border-radius: .3em;
+  cursor: pointer;
+}
+
+main section:last-of-type article:first-of-type a button:focus {
+  background-color: rgba(0, 57, 64, .8);
+  outline: none;
+  color: white;
+  border: .1em solid rgba(0, 57, 64, 0)
+}
+
+main section:last-of-type article:first-of-type a button:active {
+  background-color: Navy;
+  outline: none;
+}
+
+main section:last-of-type article:first-of-type a:focus {
+  outline: none;
+}
+
+main section:last-of-type article:first-of-type a:active {
+  outline: none;
+}
+
+main section:last-of-type article:first-of-type p {
+  color: white;
+  font-size: .90em;
+  font-weight: normal;
+  line-height: 1.25em;
+  margin-top: .9em;
+}
+
+/*-----------------------last article------------------------*/
+main section:last-of-type article:last-of-type {
+  display: flex;
   justify-content: center;
 }
 
-section:nth-of-type(4) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+main section:last-of-type article:last-of-type img {
+  width: 22em;
+  height: 32em;
 }
 
-section:nth-of-type(5) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-section:nth-of-type(6) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-
-}
-
-h2 {
-
-}
-p {
-
-}
-ul {
-
-}
-li {
-
-}
-a {
-
-}
-a:link {
-
-}
-a:visited {
-
-}
-a:hover, a:focus {
-
-}
-a:active {
-
-}
-button {
-
-}
-*/
-/* form styling */
-form {
-
-}
-  fieldset {
-
-  }
-    legend {
-
-    }
-    label {
-
-    }
-    input {
-
-    }
-    input:invalid {
-
-    }
-
-/* Section styling */
-header {
-
-}
-  header h1 {
-
-  }
-
-main {
-
-}
-  main button {
-
-  }
-section {
-
-}
-  section header {
-
-  }
-  section h2 {
-
-  }
-article {
-
-}
-  article header {
-
-  }
-  article h3 {
-
-  }
-  article footer {
-
-  }
-
-aside {
-
-}
-
+/*----------------------------------------footer---------------------------------------*/
 footer {
-
+  background-color: #003A40;
+  padding-bottom: 1.25em;
 }
 
-/* Component styling */
-section#some-ultra-cool-component {
-
+footer section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
+/*------------------------first article------------------------*/
+footer article:first-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: .1em solid #ffffff33;
+  padding: 1.25em;
+}
+
+footer article:first-of-type img {
+  width: 6.5em;
+  margin-right: .5em;
+}
+
+footer article:first-of-type p {
+  font-size: 1.2em;
+  color: white;
+  line-height: 1.2em;
+  font-weight: normal;
+  width: 100%;
+  max-width: 7em;
+  margin: 0;
+  margin-left: .5em;
+}
+
+/*------------------------second article-----------------------*/
+footer article:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5em 0 1.25em;
+}
+
+footer article:nth-of-type(2) p:first-of-type {
+  color: white;
+  margin: 0;
+  margin-bottom: .9em;
+  font-weight: bold;
+}
+
+footer article:nth-of-type(2) p:first-of-type a {
+  color: white;
+  text-decoration: none;
+  padding: 0
+}
+
+/*styling voor toegankelijkheid van element*/
+footer article:nth-of-type(2) p:first-of-type a:hover {
+  color: #ec0c00;
+}
+
+footer article:nth-of-type(2) p:first-of-type a:focus,
+footer article:nth-of-type(2) p:first-of-type a:active {
+  outline: none;
+  color: rgba(173, 223, 173, .5);
+}
+
+footer article:nth-of-type(2) p:nth-of-type(2), article:nth-of-type(2) p:nth-of-type(3) {
+  color: white;
+  margin: 0;
+  font-weight: normal;
+}
+
+footer article:nth-of-type(2) section:last-of-type {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.1em;
+  margin-bottom: 3.1em;
+}
+
+footer article:nth-of-type(2) section:last-of-type a {
+  padding: .7em .9em;
+}
+
+/*styling voor toegankelijkheid van element*/
+footer article:nth-of-type(2) section:last-of-type a:hover {
+  background-color: #ec0c00;
+  padding: .5em .5em;
+  border-radius: .5em;
+}
+
+footer article:nth-of-type(2) section:last-of-type a:focus,
+footer article:nth-of-type(2) section:last-of-type a:active {
+  outline: none;
+  background-color: rgba(173, 223, 173, .5);
+  border-radius: .5em;
+}
+
+/*------------------------last article-----------------------*/
+footer article:last-of-type {
+  color: white;
+  font-size: .75em;
+  text-align: center;
+}
+
+footer article:last-of-type a {
+  text-decoration: none;
+  color: white;
+}
+
+/*styling voor toegankelijkheid van element*/
+footer article:last-of-type a:hover {
+  color: #ec0c00;
+}
+
+footer article:last-of-type a:focus,
+footer article:last-of-type a:active {
+  outline: none;
+  color: ForestGreen;
+}
 
 /* Breakpoints */
-@media all and (min-width: 30em) {
+@media all and (min-width: 28.75em)
 
+/*460px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  header {
+    background-size: 100% auto;
+  }
 }
 
-@media all and (min-width: 60em) {
+@media all and (min-width: 31.25em)
 
+/*500px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  nav section:first-of-type a {
+    padding: 1em 2.25em 0 2.25em;
+  }
+
+  header section:only-of-type {
+    padding-left: 2.25em;
+    padding-right: 2.25em;
+  }
+
+  header section article:first-of-type {
+    display: none;
+  }
+
+  header section article:last-of-type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 3.1em;
+    width: 100%;
+  }
+
+  header section article:last-of-type div:last-of-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header section article:last-of-type p:first-of-type {
+    visibility: visible;
+  }
+
+  header section article:last-of-type input {
+    width: 100%;
+    border: none;
+    height: 3.6em;
+    max-width: 20em;
+    margin-right: .5em;
+  }
+
+  /*styling voor toegankelijkheid van element*/
+  header section article:last-of-type input:hover {
+    cursor: pointer;
+    border: .05em solid rgb(0, 57, 64);
+    background-color: rgba(0, 57, 64, .1);
+  }
+
+  header section article:last-of-type input:hover::placeholder {
+    color: #024852;
+  }
+
+  header section article:last-of-type input:focus,
+  header section article:last-of-type input:active {
+    outline: none;
+    background-color: rgba(0, 57, 64, .1);
+    caret-color: #024852;
+  }
+
+  header section article:last-of-type input::placeholder {
+    padding-left: .9em;
+    font-size: 1.3em;
+  }
+
+  header section article:last-of-type a button {
+    min-width: 13em;
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  /*styling voor toegankelijkheid van element*/
+  header section article:last-of-type a button:hover {
+    background-color: #ec0c00;
+  }
+
+  /*p styling*/
+  header section article:last-of-type p {
+    font-size: 15px;
+    line-height: 20px;
+    color: #024852;
+    margin-top: 14px;
+  }
+
+  /*---------------------------main---------------------------*/
+  main section:first-of-type {
+    margin: 5em 0;
+    padding: 0 3.1em;
+  }
+
+  main section:nth-of-type(4) {
+    padding: 5em 3.1em;
+  }
+
+  main section:nth-of-type(4) a {
+    display: none;
+  }
+
+  main section:nth-of-type(5) {
+    margin: 5em 0;
+    padding: 0 3.1em;
+  }
+
+  footer article:first-of-type img {
+    width: 10em;
+  }
+
+  footer article:first-of-type p {
+    font-size: 1.8em;
+    margin-left: 1em;
+  }
 }
 
-@media all and (min-width: 90em) {
+@media all and (min-width: 37.5em)
 
+/*600px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  header {
+    background-image: url(../images/background.jfif);
+    background-size: auto 100%;
+    background-position: -3.1em 0;
+  }
+
+  header section:only-of-type {
+    padding-left: 3.1em;
+    padding-right: 3.1em;
+    padding-bottom: 10em;
+  }
+
+  header h2 {
+    font-size: 3em;
+    line-height: 1.1em;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  header section p:nth-of-type(1) {
+    font-size: 1.75em;
+    margin-top: 1.5em;
+    line-height: 1.2em;
+  }
+
+  /*---------------------------main---------------------------*/
+  main section:first-of-type {
+    padding: 0 3.5em;
+    margin: 5em 0;
+    align-items: center;
+  }
+
+  main section:first-of-type h2 {
+    font-size: 2.2em;
+    margin-bottom: .75em;
+  }
+
+  main section:first-of-type p {
+    padding-top: .25em;
+    padding-bottom: .2em;
+  }
+
+  main section:first-of-type article img {
+    max-width: 35em;
+  }
+
+  main section:nth-of-type(2) article {
+    margin: 5em 0;
+    padding: 0 3.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main section:nth-of-type(2) article h3 {
+    font-size: 1.5em;
+    max-width: 22em;
+    margin: 0 0 2em 0;
+  }
+
+  main section:nth-of-type(2) article img {
+    width: 100%;
+    height: auto;
+    max-width: 20em;
+  }
+
+  main section:nth-of-type(3) {
+    margin: 5em 0;
+    padding: 0 3.1em;
+  }
+
+  main section:nth-of-type(3) h2 {
+    font-size: 2.2em;
+    margin-bottom: .8em;
+    align-self: center;
+  }
+
+  main section:nth-of-type(3) a button {
+    font-size: 1em;
+  }
+
+  main section:nth-of-type(3) article h3 {
+    font-size: 1.1em;
+  }
+
+  main section:nth-of-type(3) article p:first-of-type {
+    font-size: 1em;
+    padding-left: 1.4em;
+  }
+
+  main section:nth-of-type(4) h2 {
+    font-size: 2.25em;
+    margin-bottom: 2em;
+    align-self: center;
+  }
+
+  main section:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main section:nth-of-type(5) h2 {
+    font-size: 2.25em;
+    margin: 0 0 1.25em 0;
+  }
+
+  main section:last-of-type {
+    background: linear-gradient(270deg, rgb(46, 122, 110) 40%, rgb(139, 204, 187) 100%)
+  }
+
+  main section:last-of-type article:first-of-type {
+    margin-bottom: .5em;
+  }
+}
+
+@media all and (min-width: 46.9em)
+
+/*750px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  nav section:first-of-type {
+    padding: 0;
+  }
+
+  nav section:first-of-type a {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav section:last-of-type {
+    position: relative;
+    display: flex;
+    background: none;
+    transform: translateY(0%);
+    padding: 0;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 3.1em;
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0;
+    margin-left: .5em;
+  }
+
+  nav ul li {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav ul li a {
+    font-size: 1em;
+  }
+
+  /*styling voor toegankelijkheid van element*/
+  nav ul li a:hover {
+    border-bottom: .1em solid #024852;
+  }
+
+  /*styling menu ul na click event in JS, menu binnen viewport plaatsen*/
+  #hamburgermenu {
+    display: none;
+  }
+}
+
+@media all and (min-width: 50em)
+
+/*800px*/
+  {
+  main section:nth-of-type(5) article {
+    align-self: center;
+  }
+}
+
+@media all and (min-width: 56.25em)
+
+/*900px*/
+  {
+
+  /*---------------------------main---------------------------*/
+  main section:first-of-type div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main section:first-of-type article {
+    flex: 1 1 0;
+    display: flex;
+    margin: 1em;
+    padding: 0;
+  }
+
+  main section:first-of-type article:nth-of-type(2) {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  main section:first-of-type article p {
+    position: relative;
+    padding-top: .4em;
+    padding-bottom: .3em;
+    margin-bottom: 1.25em;
+    align-self: center;
+  }
+
+  main section:first-of-type article h3 {
+    align-self: flex-start;
+    font-size: 1.4em;
+  }
+
+  main section:first-of-type article li {
+    font-size: 1em;
+  }
+
+  main section:nth-of-type(4) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5em 5em;
+  }
+
+  main section:nth-of-type(4) h2 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    justify-self: center;
+  }
+
+  main section:nth-of-type(4) article:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /*---------------------------footer---------------------------*/
+  footer article:first-of-type {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  footer article:first-of-type p {
+    margin-left: 2em;
+  }
+}
+
+@media all and (min-width: 62.5em)
+
+/*1000px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  header section:only-of-type {
+    padding: 11.25em 6.25em 10em;
+  }
+
+  nav {
+    padding-left: 6.25em;
+    padding-right: 6.25em;
+  }
+
+  /*---------------------------main---------------------------*/
+  main section:nth-of-type(3) {
+    margin: 5em 0;
+    padding: 0 7.5em;
+  }
+
+  main section:nth-of-type(3) div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1.3em;
+  }
+
+  main section:nth-of-type(3) article p:last-of-type {
+    padding: 2.5em 1.25em 1.25em;
+  }
+
+  main section:nth-of-type(4) {
+    padding: 5em 7.5em;
+  }
+}
+
+@media all and (min-width: 68.75em)
+
+/*1100px*/
+  {
+  main section:last-of-type {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    padding-top: 5em;
+  }
+
+  main section:last-of-type article:first-of-type {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding-left: 2.5em;
+  }
+}
+
+@media all and (min-width: 72.5em)
+
+/*1160px*/
+  {
+  footer article:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 20em 1fr 20em;
+    width: 80%;
+    margin: 0;
+  }
+
+  footer article:nth-of-type(2) section:first-of-type {
+    align-items: flex-start;
+    justify-self: center;
+  }
+}
+
+@media all and (min-width: 75em)
+
+/*1200px*/
+  {
+
+  /*---------------------------header---------------------------*/
+  header {
+    background-size: 115% auto;
+    background-position: center right;
+  }
+
+  header nav section:last-of-type {
+    padding: 0;
+  }
+
+  /*---------------------------header---------------------------*/
+  main section:first-of-type {
+    padding: 0 15.5em;
+  }
+
+  main section:nth-of-type(3) {
+    padding: 0 15.5em;
+  }
+
+  main section:nth-of-type(4) {
+    padding-left: 15.5em;
+    padding-right: 15.5em;
+  }
+}
+
+@media all and (min-width: 100em)
+
+/*1600px*/
+  {
+  header nav {
+    padding-left: 15.5em;
+    padding-right: 15.5em;
+  }
+
+  #togglemenu {
+    padding: 0;
+  }
+
+  header section:last-of-type {
+    padding-left: 15.5em;
+    padding-right: 15.5em;
+  }
 }

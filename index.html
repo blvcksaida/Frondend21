@@ -6,7 +6,7 @@
 	<meta name="author" content="jouw naam">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Howdy</title>
+	<title>Crisp</title>
 
 	<link href="styles/style.css" rel="stylesheet">
 </head>
@@ -14,156 +14,190 @@
 <body>
 	<header>
 		<nav>
-					<a href="https://www.crisp.nl/">
-						<img src="images/crisplogogreen.svg" alt="crisp logo green">
-					</a>
-					<img src="images/hamburgerlogo.svg" alt="hamburger menu">
-				<!--<ul>
+			<section>
+				<a href="https://www.crisp.nl/">
+					<img src="images/crisplogogreen.svg" alt="crisp logo green">
+				</a>
+				<img id="hamburgermenu" src="./images/hamburgerlogo.svg" alt="hamburger menu">
+			</section>
+			<section id="toggleMenu">
+				<ul>
 					<li>
-						<a href="">Onze producten</a>
+						<a href="contact.html">Onze producten</a>
 					</li>
 					<li>
-						<a href="">Over</a>
+						<a href="contact.html">Over</a>
 					</li>
 					<li>
-						<a href="">Team</a>
+						<a href="contact.html">Team</a>
 					</li>
 					<li>
-						<a href="">Pers</a>
+						<a href="contact.html">Pers</a>
 					</li>
 					<li>
-						<a href="">Contact</a>
+						<a href="contact.html">Contact</a>
 					</li>
 					<li>
-						<a href="">Jobs</a>
+						<a href="contact.html">Jobs</a>
 					</li>
-				</ul>-->
+				</ul>
+			</section>
 		</nav>
-		<div>
-			<h1>De supermarkt-app voor knettervers eten</h1>
+		<section>
+			<h2>De supermarkt-app voor knettervers eten</h2>
 			<p>Vandaag besteld, morgen thuis in heel Nederland</p>
-			<a href=""><button>Download nu de app</button></a>
-			<p>Je eerste €5 is gratis!</p>
-		</div>
+			<article>
+				<a href=""><button>Download nu de app</button></a>
+				<p>Je eerste €5 is gratis!</p>
+			</article>
+			<article>
+				<input type="text" spellcheck="false" placeholder="E-mailadres">
+				<!--Div element om display: flex; mee te geven afzonderlijk van input element-->
+				<div>
+					<a href=""><button>Stuur mij een link</button></a>
+					<p>Je eerste €5 is gratis!</p>
+				</div>
+			</article>
+		</section>
 	</header>
 	<main>
 		<section>
 			<h2>Zo werkt Crisp</h2>
-			<article>
-				<p>Voor 22:00</p>
-				<img src="images/main1.jfif" alt="Woman looking at phone during breakfast">
-				<h3>Kies je boodschappen</h3>
-				<ul>
-					<li>Alleen van de beste makers en telers, dus altijd goed</li>
-					<li>Bestel vanaf €50</li>
-					<li>Morgen in huis, waar je ook woont</li>
-				</ul>
-			</article>
-			<article>
-				<p>Vanaf 04:00</p>
-				<img src="images/main2.jfif" alt="Baker">
-				<h3>Wij gaan aan de slag</h3>
-				<ul>
-					<li>Wij bestellen pas als jij bestelt, dus we hebben geen onnodige voorraad</li>
-					<li>Dat maakt ons net zo betaalbaar als een ''gewone'' supermarkt</li>
-					<li>En je boodschappen zijn altijd erg vers</li>
-				</ul>
-			</article>
-			<article>
-				<p>Vanaf 18:00</p>
-				<img src="images/main3.jfif" alt="Baker">
-				<h3>Bezorgd wanneer jij wilt</h3>
-				<ul>
-					<li>We houden je precies op de hoogte van de bezorging</li>
-					<li>Doordeweeks tussen 18:00 en 22:00 uur; in de Randstad ook in het weekend</li>
-					<li>€2,95 bezorgkosten en vanaf €75 gratis!</li>
-				</ul>
-			</article>
+			<!--Div element om de article-elementen display: flex; mee te geven afzonderlijk van h2 element en flex-direction: row; te geven-->
+			<div>
+				<article>
+					<p>Voor 22:00</p>
+					<img src="images/main1.jfif" alt="Woman looking at phone during breakfast">
+					<h3>Kies je boodschappen</h3>
+					<ul>
+						<li>Alleen van de beste makers en telers, dus altijd goed</li>
+						<li>Bestel vanaf €50</li>
+						<li>Morgen in huis, waar je ook woont</li>
+					</ul>
+				</article>
+				<article>
+					<p>Vanaf 04:00</p>
+					<img src="images/main2.jfif" alt="Baker">
+					<h3>Wij gaan aan de slag</h3>
+					<ul>
+						<li>Wij bestellen pas als jij bestelt, dus we hebben geen onnodige voorraad</li>
+						<li>Dat maakt ons net zo betaalbaar als een ''gewone'' supermarkt</li>
+						<li>En je boodschappen zijn altijd erg vers</li>
+					</ul>
+				</article>
+				<article>
+					<p>Vanaf 18:00</p>
+					<img src="images/main3.jfif" alt="Baker">
+					<h3>Bezorgd wanneer jij wilt</h3>
+					<ul>
+						<li>We houden je precies op de hoogte van de bezorging</li>
+						<li>Doordeweeks tussen 18:00 en 22:00 uur; in de Randstad ook in het weekend</li>
+						<li>€2,95 bezorgkosten en vanaf €75 gratis!</li>
+					</ul>
+				</article>
+			</div>
 		</section>
 		<section>
 			<article>
 				<h3>''Crisp heeft lekkere, verse producten van de créme de la créme van de leveranciers.''</h3>
-				<img src="images/des.png" height="190
-				" width="290" alt="Merk logo's">
+				<img src="images/deliciousquote.png" alt="Merk logo's">
 			</article>
 		</section>
 		<section>
 			<h2>Een greep uit onze shop</h2>
-			<article>
-				<img src="images/maintrostomaten.jfif" alt="Tros tomaten">
-				<h2>Cherry trostomaten</h2>
-				<p>Van de familie Buys</p>
-				<span>2</span>
-				<span>.</span>
-				<span>99</span>
-			</article>
-			<article>
-				<img src="images/mainmelk.jfif" alt="Pak melk">
-				<h2>Boeren halfvolle melk</h2>
-				<p>Beste boerderijzuivel van Nederland</p>
-				<span>1</span>
-				<span>.</span>
-				<span>19</span>
-			</article>
-			<article>
-				<img src="images/mainzalm.jfif" alt="Zalm">
-				<h2>Zalmfilet met vel</h2>
-				<p>Duurzaam en vers uit Noorwegen (±240g)</p>
-				<span>6</span>
-				<span>.</span>
-				<span>99</span>
-			</article>
-			<article>
-				<img src="images/mainmexicaans.jfif" alt="Mexicaans">
-				<h2>Mexicaanse stoofschotel</h2>
-				<p>Puur en vers gemaakt</p>
-				<span>3</span>
-				<span>.</span>
-				<span>99</span>
-			</article>
-			<a href="/onze-producten">
-				<p>Meer uit het assortiment</p>
-			</a>
+			<!--Div element om de article-elementen display: flex; mee te geven afzonderlijk van h2 element en flex-direction: row; te geven-->
+			<div>
+				<article>
+					<img src="images/maintrostomaten.jfif" alt="Tros tomaten">
+					<h3>Cherry trostomaten</h3>
+					<p>Van de familie Buys</p>
+					<p>
+						<span>2</span>
+						<span>.</span>
+						<span>99</span>
+					</p>
+				</article>
+				<article>
+					<img src="images/mainmelk.jfif" alt="Pak melk">
+					<h3>Boeren halfvolle melk</h3>
+					<p>Beste boerderijzuivel van Nederland</p>
+					<p>
+						<span>1</span>
+						<span>.</span>
+						<span>19</span>
+					</p>
+				</article>
+				<article>
+					<img src="images/mainzalm.jfif" alt="Zalm">
+					<h3>Zalmfilet met vel</h3>
+					<p>Duurzaam en vers uit Noorwegen (±240g)</p>
+					<p>
+						<span>6</span>
+						<span>.</span>
+						<span>99</span>
+					</p>
+				</article>
+				<article>
+					<img src="images/mainmexicaans.jfif" alt="Mexicaans">
+					<h3>Mexicaanse stoofschotel</h3>
+					<p>Puur en vers gemaakt</p>
+					<p>
+						<span>3</span>
+						<span>.</span>
+						<span>99</span>
+					</p>
+				</article>
+			</div>
+			<a href="/onze-producten"><button>Meer uit het assortiment</button></a>
 		</section>
 		<section>
 			<h2>Deze mensen gingen je voor</h2>
 			<article>
 				<h3>Aanrader!</h3>
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<p>Sun Tieskuh</p>
+				<article>
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<p>Sun Tieskuh</p>
+				</article>
 				<p>Vlees van de slager, groente van de groenteboer, vis van de visboer en delicatessen van een traiteur, maar dan in 1 online supermakt. Top!</p>
 			</article>
 			<article>
 				<h3>Favoriete app</h3>
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<p>Carien N</p>
+				<article>
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<p>Carien N</p>
+				</article>
 				<p>Deze app gebruik ik bijna dagelijks om verse producten toe te voegen aan mijn winkelmandje. Crisp levert topproducten, fantastische service en is erg flexibel/makkelijk!</p>
 			</article>
 			<article>
 				<h3>Overzichtelijk</h3>
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<img src="images/ratingstar.jpg" alt="Star rating">
-				<p>Max M</p>
+				<article>
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<img src="images/ster.svg" alt="Star rating">
+					<p>Max M</p>
+				</article>
 				<p>Overzichtelijk en fijn om mee te werken. Producten zijn qua prijs/kwaliteit verhouding uitmuntend!</p>
 			</article>
+			<a href=""><button>Alle reviews in de app-store</button></a>
 		</section>
 		<section>
 			<h2>Veelgestelde vragen</h2>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Wat verandert er door het coronavirus?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Wat verandert er door het coronavirus?</h3>
+				</div>
 				<p>Een paar dingen veranderen gelukkig niet: iedereen is welkom en er is geen wachttijd als je voor het eerst boodschappen wilt doen. Wél een beetje anders is de bezorging. Voorlopig zetten we je bestelling zonder contact voor de deur. De
 					bezorger belt aan en wacht op veilige afstand. Je brengt dus zelf je boodschappen naar binnen. Achter de schermen doen we ook alles volgens de RIVM richtlijnen en onze eigen hoge hygiëne-standaarden. We werken zo veel mogelijk vanuit huis,
 					beperken externe contacten en ontsmetten onze handen. Je groente en fruit verpakken we altijd met handschoenen aan, en de doos waarin je boodschappen worden vervoerd, wordt eenmalig gebruikt. We nemen onze verantwoordelijkheid om mensen te
@@ -171,63 +205,79 @@
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Waar halen we onze producten vandaan?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Waar halen we onze producten vandaan?</h3>
+				</div>
 				<p>Wij vinden het belangrijk dat je weet waar je eten vandaan komt, en dat er zo min mogelijk schakels en bewerkingen zitten tussen jou en degene die je voedsel produceert. Dus kopen we rechtstreeks in bij de boer, de bakker, de visafslag en
 					de worstenmaker. Zo weet je zeker dat ‘vers’ echt vers is. Dat de makers een eerlijke prijs krijgen. En dat het helemaal niet zo ingewikkeld is om meer met de seizoenen mee te eten. Natuurlijk is dat in veel opzichten beter, maar vooral
 					gewoon veel lekkerder.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Is alles biologisch?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Is alles biologisch?</h3>
+				</div>
 				<p>Nee, niet alle producten zijn biologisch. De kwaliteit en versheid van wat we verkopen staat voorop. Voor sommige producten geldt dat biologisch dan de beste keuze is. Als iets (gecertificeerd) biologisch is, dan zie je dat bij de
 					productinformatie in de app. Maar er zijn genoeg producten die zonder dat label óók goed in elkaar zitten en top smaken. Veel van onze telers zitten in Nederland en daardoor weten we goed wat zij doen om ervoor te zorgen dat ze kwalitatief
 					mooie producten aan ons kunnen leveren. Een bio-keurmerk is niet voor iedere teler haalbaar, omdat hier ook kosten en administratief werk aan te pas komen, maar dit betekent niet dat ze minder goede standaarden hebben.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Is Crisp een abonnement?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Is Crisp een abonnement?</h3>
+				</div>
 				<p>Nee. Je winkelt bij ons net zoals in een ‘gewone’ supermarkt en rekent per keer af. Er is dus geen enkele verplichting om bij ons te bestellen. Al hopen we natuurlijk dat je zo blij bent met je producten dat we je vaker terug zien.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Wat zijn de bezorgtijden?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Wat zijn de bezorgtijden?</h3>
+				</div>
 				<p>We bezorgen van maandag tot en met vrijdag tussen 17.00 en 22.00 uur. In een deel van de Randstad bezorgen we ook in het weekend en kun je kiezen voor kortere tijdvakken. In de app zie je welke bezorgmomenten en-tijden beschikbaar zijn
 					voor jouw adres. Zodra de bezorger onderweg is, krijg je van ons ook nog een 'track & trace' link. Zo weet je precies hoe laat we écht voor je deur staan.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Bezorgen jullie door het hele land?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Bezorgen jullie door het hele land?</h3>
+				</div>
 				<p>Jazeker! We vinden dat iedereen in Nederland lekker, goed én vers moet kunnen eten, en daarom bezorgen we in heel Nederland met uitzondering van de Waddeneilanden. Overal geldt: vandaag voor 22.00 uur besteld, morgenavond in huis.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Wat zijn de bezorgkosten?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Wat zijn de bezorgkosten?</h3>
+				</div>
 				<p>Een standaardbezorging kost € 2,95. Bestel je voor meer dan 75 euro? Dan bezorgen we gratis. In een deel van de Randstad kun je tegen een kleine meerprijs ook voor een korter tijdvak kiezen.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Waarom is er een minimum bestelbedrag?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Waarom is er een minimum bestelbedrag?</h3>
+				</div>
 				<p>Door een minimumbedrag van 50 euro per bestelling te hanteren kunnen we de bezorgkosten laag houden en de bezorging efficiënt organiseren.
 				</p>
 			</article>
 			<article>
-				<img src="" alt="">
-				<img src="" alt="">
-				<h3>Moet ik thuis zijn als Crisp bezorgd?</h3>
+				<!--Div element om display: flex; mee te geven afzonderlijk van h2 element en boven p-element te plaatsen naast elkaar door flex-direction: row-->
+				<div>
+					<img src="images/plus.svg" alt="plus sign">
+					<h3>Moet ik thuis zijn als Crisp bezorgd?</h3>
+				</div>
 				<p>Het liefst wel. Veel van onze producten zijn gekoeld of bevroren, dus die kunnen het best snel de koelkast of de vriezer in. Met de track & trace informatie die we je sturen, zie je precies hoe laat we er zullen zijn. Je kunt in je account
 					ook
 					een opmerking voor de bezorger toevoegen indien je er niet bent, de bezorger kan dit dan altijd opvolgen. Ben je onverwachts niet thuis op de dag van bezorging? Geef jouw opmerking dan door aan ons serviceteam zodat we de bezorger op de
@@ -236,54 +286,48 @@
 			</article>
 		</section>
 		<section>
-			<img src="images/maintelefoon.png" alt="">
-			<h2>Zin in Crisp?</h2>
-			<p>Snel naar de app</p>
-			<input id="InputFieldDownload" autocomplete="off" placeholder="E-mailadres" type="text" spellcheck="false">
-			<div id="InputFieldDownloadErrorPopUp"></div>
-			<div id="button">
-				<div id="EmailButton">
-					<a><button>Stuur mij een link</button>
-					</a>
-					<p>Je eerste €5 is gratis!</p>
+			<article>
+				<h3>Zin in Crisp?</h3>
+				<a><button>Download nu de app</button></a>
+				<p>Je eerste €5 is gratis!</p>
+			</article>
+			<article>
+				<img src="images/maintelefoon.png" alt="De Crisp app op telefoon">
+			</article>
 		</section>
 	</main>
 	<footer>
 		<section>
 			<article>
-				<!--<img src="" alt="">-->
-				<span>
-					"beter eten,"
-				</span>
-				<span>
-					"lekker geregeld"
-				</span>
+				<img src="images/crisplogowhite.svg" alt="Crisp logo white">
+				<p>beter eten, lekker geregeld</p>
 			</article>
 			<article>
-				<span>
-					"Whatsapp"
-				</span>
-				<span>
-					<a href="tel:097 010 2606 61"></a>
-				</span>
-				<span>
-					"ma-vr: 9.00-22.30"
-				</span>
-				<span>
-					"za & zo: 10.00-21.00"
-				</span>
-				<a href="https://www.instagram.com/crisp_nl/">
-					<img src="images/footerinstagram.png" alt="Instagram logo">
-				</a>
-				<a href="https://www.linkedin.com/company/crispnl/">
-					<img src="images/footerlinkedin.png" alt="LinkedIn logo">
-				</a>
-				<a href="https://www.facebook.com/crispNL/">
-					<img src="images/footerfacebook.png" alt="Facebook logo">
-				</a>
+				<section>
+					<p>Whatsapp
+						<a href="tel:097010260661">097 010 2606 61</a>
+					</p>
+					<p>
+						ma-vr: 9.00-22.30
+					</p>
+					<p>
+						za & zo: 10.00-21.00
+					</p>
+				</section>
+				<section>
+					<a href="https://www.instagram.com/crisp_nl/">
+						<img src="images/instalogo.svg" alt="Instagram logo">
+					</a>
+					<a href="https://www.linkedin.com/company/crispnl/">
+						<img src="images/linkedinlogo.svg" alt="LinkedIn logo">
+					</a>
+					<a href="https://www.facebook.com/crispNL/">
+						<img src="images/facebooklogo.svg" alt="Facebook logo">
+					</a>
+				</section>
 			</article>
 			<article>
-				"© Crisp 2021 -"
+				© Crisp 2021 -
 				<a href="">Privacyverklaring</a>
 			</article>
 		</section>
